@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-04-18T14:56:53.537224" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\utilisateur\Desktop\test_py\test.robot">
+<test id="s1-t1" name="Inscription gestion freelance" line="8">
+<kw name="Ouvrir Le Navigateur" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:54.032564" level="INFO">Opening browser 'chrome' to base url 'https://thrundrz.fr/gestion/'.</msg>
+<arg>url=${chemin}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-18T14:56:54.032332" elapsed="1.596182"/>
+</kw>
+<status status="PASS" start="2026-04-18T14:56:54.031475" elapsed="1.597207"/>
+</kw>
+<kw name="Aller Sur La Page Inscription" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href="/gestion/newcompte"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-18T14:56:55.629476" elapsed="0.036932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:55.666798" level="INFO">Clicking element 'xpath=//a[@href="/gestion/newcompte"]'.</msg>
+<arg>xpath=//a[@href="/gestion/newcompte"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:55.666586" elapsed="0.438565"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://thrundrz.fr/gestion/newcompte</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.105326" elapsed="0.005046"/>
+</kw>
+<status status="PASS" start="2026-04-18T14:56:55.629194" elapsed="0.481295"/>
+</kw>
+<kw name="Remplir Le Formulaire Inscription" owner="keywords">
+<kw name="Name" owner="FakerLibrary">
+<msg time="2026-04-18T14:56:56.111339" level="INFO">${nom} = Isabelle-Nath Vidal</msg>
+<var>${nom}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2026-04-18T14:56:56.111142" elapsed="0.000228"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2026-04-18T14:56:56.111638" level="INFO">${email} = ibourgeois@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2026-04-18T14:56:56.111468" elapsed="0.000195"/>
+</kw>
+<kw name="Phone Number" owner="FakerLibrary">
+<msg time="2026-04-18T14:56:56.111875" level="INFO">${telephone} = +33 (0)4 27 94 65 63</msg>
+<var>${telephone}</var>
+<status status="PASS" start="2026-04-18T14:56:56.111746" elapsed="0.000153"/>
+</kw>
+<kw name="Numerify" owner="FakerLibrary">
+<msg time="2026-04-18T14:56:56.112149" level="INFO">${siret} = 21110395510168</msg>
+<var>${siret}</var>
+<arg>text=##############</arg>
+<doc>Generate a string with each placeholder in ``text`` replaced according
+to the following rules:</doc>
+<status status="PASS" start="2026-04-18T14:56:56.111978" elapsed="0.000194"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2026-04-18T14:56:56.112533" level="INFO">${password} = i$M30)Xn^ZO&amp;</msg>
+<var>${password}</var>
+<arg>length=12</arg>
+<arg>special_chars=True</arg>
+<arg>digits=True</arg>
+<arg>upper_case=True</arg>
+<arg>lower_case=True</arg>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.112256" elapsed="0.000304"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.112852" level="INFO">Typing text 'Isabelle-Nath Vidal' into text field 'css=input[placeholder="Jean Dupont"]'.</msg>
+<arg>css=input[placeholder="Jean Dupont"]</arg>
+<arg>${nom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.112678" elapsed="0.082381"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.195625" level="INFO">Typing text 'ibourgeois@example.net' into text field 'css=input[placeholder="contact@societe.com"]'.</msg>
+<arg>css=input[placeholder="contact@societe.com"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.195302" elapsed="0.068125"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.263841" level="INFO">Typing text '+33 (0)4 27 94 65 63' into text field 'css=input[placeholder="+33 6 12 34 56 78"]'.</msg>
+<arg>css=input[placeholder="+33 6 12 34 56 78"]</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.263604" elapsed="0.064159"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.328245" level="INFO">Typing text '21110395510168' into text field 'css=input[placeholder="12345678901234"]'.</msg>
+<arg>css=input[placeholder="12345678901234"]</arg>
+<arg>${siret}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.327981" elapsed="0.062701"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.391110" level="INFO">Typing text 'i$M30)Xn^ZO&amp;' into text field 'css=input[placeholder="********"]'.</msg>
+<arg>css=input[placeholder="********"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.390867" elapsed="0.054828"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:56:56.446106" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:56:56.445871" elapsed="0.053480"/>
+</kw>
+<status status="PASS" start="2026-04-18T14:56:56.110887" elapsed="0.388606"/>
+</kw>
+<kw name="Verifier La Connexion" owner="keywords">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:11.714651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-18T14:57:11.714997" level="FAIL">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</msg>
+<arg>https://thrundrz.fr/gestion/dashboard</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="FAIL" start="2026-04-18T14:56:56.500022" elapsed="15.218358">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://thrundrz.fr/gestion/dashboard</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-04-18T14:57:11.718663" elapsed="0.000049"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-04-18T14:57:11.718855" elapsed="0.000036"/>
+</kw>
+<status status="FAIL" start="2026-04-18T14:56:56.499790" elapsed="15.219273">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-04-18T14:56:54.030658" elapsed="17.689204">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</test>
+<test id="s1-t2" name="Login gestion freelance" line="14">
+<kw name="Ouvrir Le Navigateur" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:11.722104" level="INFO">Opening browser 'chrome' to base url 'https://thrundrz.fr/gestion/'.</msg>
+<arg>url=${chemin}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-18T14:57:11.721711" elapsed="1.877025"/>
+</kw>
+<status status="PASS" start="2026-04-18T14:57:11.721466" elapsed="1.877412"/>
+</kw>
+<kw name="Aller Sur La Page Login" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href="/gestion/login"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-18T14:57:13.599763" elapsed="0.038938"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:13.639375" level="INFO">Clicking element 'xpath=//a[@href="/gestion/login"]'.</msg>
+<arg>xpath=//a[@href="/gestion/login"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:57:13.639092" elapsed="0.693192"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://thrundrz.fr/gestion/login</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-04-18T14:57:14.332580" elapsed="0.005557"/>
+</kw>
+<status status="PASS" start="2026-04-18T14:57:13.599339" elapsed="0.738913"/>
+</kw>
+<kw name="Remplir Le Formulaire Login" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-18T14:57:14.339521" elapsed="0.016809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:14.356921" level="INFO">Typing text 'lo@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:57:14.356575" elapsed="0.084399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:14.441635" level="INFO">Typing text 'TestTest' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:57:14.441294" elapsed="0.057615"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:14.499264" level="INFO">Clicking button 'xpath=//button[contains(text(), "Se connecter")]'.</msg>
+<arg>xpath=//button[contains(text(), "Se connecter")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-18T14:57:14.499079" elapsed="0.057915"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<tag>Login</tag>
+<status status="PASS" start="2026-04-18T14:57:14.338821" elapsed="0.218290"/>
+</kw>
+<kw name="Verifier La Connexion" owner="keywords">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<msg time="2026-04-18T14:57:29.756181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-18T14:57:29.756338" level="FAIL">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</msg>
+<arg>https://thrundrz.fr/gestion/dashboard</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="FAIL" start="2026-04-18T14:57:14.557747" elapsed="15.199716">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://thrundrz.fr/gestion/dashboard</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2026-04-18T14:57:29.757668" elapsed="0.000038"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-04-18T14:57:29.757799" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-04-18T14:57:14.557490" elapsed="15.200421">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-04-18T14:57:11.721014" elapsed="18.037423">Location did not become 'https://thrundrz.fr/gestion/dashboard' in 15 seconds.</status>
+</test>
+<status status="FAIL" start="2026-04-18T14:56:53.538704" elapsed="36.221237"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="0" fail="2" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
